@@ -1,0 +1,49 @@
+let mapleader=" "
+
+set number relativenumber
+set scrolloff=5
+set showcmd
+set incsearch
+map Q gq
+
+" Searching
+set hlsearch
+set ignorecase
+set smartcase
+set showmode
+
+nnoremap <leader><space> :nohlsearch<CR>
+
+nmap <C-S-j> <Action>(ActivateTerminalToolWindow)
+
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+
+nmap ]c <Action>(VcsShowNextChangeMarker)
+nmap [c <Action>(VcsShowPrevChangeMarker)
+nmap =c <Action>(VcsShowCurrentChangeMarker)
+
+nmap gb <Action>(Back)
+nmap gD <Action>(GotoTypeDeclaration)
+nmap gf <Action>(Forward)
+nmap gh <Action>(ShowHoverInfo)
+nmap gL <Action>(QuickImplementations)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+
+nmap J gT
+nmap K gt
+
+nmap <leader>P <Action>(ParameterInfo)
+nmap <leader>r <Action>(ToggleRenderedDocPresentation)
+nmap <leader>x <Action>(HideAllWindows)
+
+vnoremap <leader>y "+y
+nmap <leader>p "+p
+nmap <leader>f <Action>(SearchEverywhere)
+
+nmap <leader>q :q<CR>
+
+" Plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
